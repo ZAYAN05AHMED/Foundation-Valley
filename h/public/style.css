@@ -1,0 +1,238 @@
+body
+{
+    background-color: grey !important;
+}
+.startBtn, .adminBtn, .homeBtn
+{
+    font-size: xx-large !important;
+    border-radius: 0px 40px 0px 40px !important;
+    padding: 30px !important;
+    border: none !important;
+    margin: 10px !important;
+    transition: 500ms;
+}
+#mainDiv
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainBody
+{ width: 50%;
+    display: flex;
+    min-width:300px;
+    flex-direction: column;
+    align-items: center !important;   
+}
+#quiz, #panelInner
+{
+    margin: 20px;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    /* display: grid; */
+    grid-template-rows: 60px auto;
+    border-radius: 30px;
+    color: white;
+}
+#panelInner
+{
+    height: 650px;
+    width: 100%;
+    /* grid-template-rows: 60px auto 62px; */
+}
+#loader
+{
+    width: 100px;
+    height: 100px;
+}
+#loaderDiv
+{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 13;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#quizHeader, #header, #addBtnDiv
+{
+    /* height: 60px; */
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+#quizHeader
+{
+    width: 100%;
+}
+#header
+{
+    justify-content: center;
+}
+#header h3{
+    color: white;
+}
+#quizBody
+{
+    background-color: rgb(211, 209, 209);
+    /* border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px; */
+    padding: 10px 20px;
+    color: black;
+}
+#timer
+{
+    color: white;
+    padding: 18px;
+    background-color: gray;
+    margin-right: -20px;
+    border-top-right-radius: 27px;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.option_group{
+    margin-left: 0;
+    padding-left: 0;
+}
+li
+{
+    list-style-type: none;
+}
+.option, .optionPanel
+{
+    border: 3px solid transparent;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    margin: 10px 10px 10px 0;
+    min-height: 42px;
+    transition: 500ms;
+}
+.option:hover
+{
+    cursor: pointer;
+    border: 3px solid rgb(130, 18, 182);
+}
+.nxtBtn, .rstBtn
+{
+    background-color: rgb(130, 18, 182) !important;
+    border-radius: 50px !important;
+    padding: 15px !important;
+    border: none !important;
+    float: right;
+}
+.active
+{
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    margin: 10px 10px 10px 0;
+    color: white;
+    background-color: rgb(130, 18, 182);
+    border: 3px solid rgb(130, 18, 182);
+    transition: 500ms;
+}
+.exitBtn
+{
+    border-radius: 50px !important;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+    font-size: xx-large !important;
+}
+.nxtBtn:focus, .exitBtn:focus, .rstBtn:focus, .startBtn:focus, .adminBtn:focus, .homeBtn:focus
+{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.nxtBtn:hover, .exitBtn:hover, .rstBtn:hover, .startBtn:hover, .adminBtn:hover, .homeBtn:hover
+{
+    background-color: white !important;
+    color: black !important;
+    transition: 500ms;
+}
+/* =================Admin Panel================ */
+#mainPanel
+{
+    min-width: 500px;
+    min-height: 700px;
+    justify-content: center;
+    align-items: center;
+}
+#questionsBody
+{
+    background-color: rgb(211, 209, 209);
+    padding: 10px 20px;
+    overflow-y: auto;/*when we'll add questions then scroll bar will be needed*/
+}
+#delAllBtn, #addBtn
+{
+    
+    border-radius: 10px 0px 10px 0px;
+    font-size: 30px;
+    padding: 8px 18px;
+    margin: 1px 30px;
+}
+#addBtn Div
+{
+    height: 65px;
+    justify-content: center;
+    box-shadow: 0 -2px 5px 1px rgba(0, 0, 0, 0.3);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.homeBtn
+{
+    /* left: 70%; */
+    position: static;
+    top: 40vh;
+    /* padding: 30px 50px !important; */
+}
+.panelLi
+{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 42px;
+    align-items: center;
+    margin: 10px;
+}
+.liBtnAdd, .liBtnCancel, .liBtn
+{
+    font-size: 25px !important;
+    border-radius: 50% !important;
+    padding: 5px 13px !important;
+    margin: 0 20px;
+    max-height: 50px;
+}
+.liBtnAdd
+{
+    padding: 6px 13px 5px 13px !important;
+}
+.liBtnCancel
+{
+    padding: 6px 13px 13px 13px !important;
+}
+.dis{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
